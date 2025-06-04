@@ -1,27 +1,31 @@
-🧩 Grocery App – Implementation Flow
+# 🧩 Grocery App – Implementation Flow
 
-🎯 Objective
+## 🎯 Objective
 
 To build a responsive, user-friendly grocery shopping experience that includes:
 
-    Category filtering, search, and cart functionality
+- Category filtering, search, and cart functionality  
+- Dynamic offer application (buy X get Y)  
+- Smooth state management with localStorage persistence  
 
-    Dynamic offer application (buy X get Y)
+---
 
-    Smooth state management with localStorage persistence
+## 🧱 Tech Stack
+
+| Area        | Tech Used           |
+|-------------|---------------------|
+| Framework   | React + TypeScript  |
+| Build Tool  | Vite                |
+| Styling     | Tailwind CSS        |
+| State Mgmt  | Zustand + persist   |
+| Routing     | React Router DOM    |
+| Hosting     | Vercel              |
+
+---
+
+## 🗂️ File Structure (Simplified)
 
 
-🧱 Tech Stack
-  Area	         Tech Used
-Framework	  React + TypeScript
-Build Tool	  Vite
-Styling	      Tailwind CSS
-State Mgmt	  Zustand + persist
-Routing	      React Router DOM
-Hosting	      Vercel
-
-
-🗂️ File Structure (Simplified)
 
 src/
 ├── components/
@@ -36,6 +40,7 @@ src/
 
 
 🔁 Flow Breakdown
+
 1. Data Fetching
 
     API: https://uxdlyqjm9i.execute-api.eu-west-1.amazonaws.com/s?category=all
