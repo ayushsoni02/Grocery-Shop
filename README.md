@@ -39,19 +39,3 @@ cd grocery-shop
 npm install
 npm run dev
 
-
-📦 API
-
-    Products API:
-    https://uxdlyqjm9i.execute-api.eu-west-1.amazonaws.com/s?category=all
-
-✅ Deployment
-
-Deployed on Vercel
-💡 Future Improvements
-
-    Payment integration
-
-    Wishlist support
-
-    Admin dashboard
