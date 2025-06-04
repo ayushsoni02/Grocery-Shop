@@ -25,8 +25,6 @@ To build a responsive, user-friendly grocery shopping experience that includes:
 
 ## 🗂️ File Structure (Simplified)
 
-
-
 src/
 ├── components/
 │   └── Navbar.tsx, ProductCard.tsx
