@@ -1,16 +1,6 @@
-// src/components/ProductCard.tsx
 import { useCartStore } from '../store/cartStore'
 import type { Product } from '../types/product'
 
-// type Product = {
-//   id: string
-//   name: string
-//   description: string
-//   price: number
-//   stock: number
-//   image: string
-//   category: string
-// }
 
 const ProductCard = ({ product }: { product: Product }) => {
   const addToCart = useCartStore(state => state.addToCart)

@@ -92,7 +92,7 @@ export const useCartStore = create<CartStore>()(
                     item.id === id && !item.isFree ? { ...item, quantity: qty } : item
                 )
 
-                // Re-run offer logic to update free items based on new quantity
+               
                 const coke = cart.find(p => p.title.includes('Coca-Cola') && !p.isFree)
                 const cokeFreeIndex = cart.findIndex(p => p.title.includes('Coca-Cola') && p.isFree)
                 if (coke && coke.quantity >= 6) {
@@ -169,7 +169,7 @@ export const useCartStore = create<CartStore>()(
             }
         }),
         {
-            name: 'grocery-cart-storage', // localStorage key
+            name: 'grocery-cart-storage',
         }
     )
 )

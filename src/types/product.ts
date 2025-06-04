@@ -1,17 +1,16 @@
-// This matches what the API actually returns
 export type APIProduct = {
   id: number
   name: string
   description: string
-  price: string  // e.g. "£2"
+  price: string  
   available: number
   img: string
   type: string
 }
 
-// This is the normalized version used across the app
+
 export type Product = {
-  id: string       // use string for consistency in Zustand
+  id: string       
   title: string
   description: string
   price: number

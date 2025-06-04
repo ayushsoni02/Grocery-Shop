@@ -1,19 +1,6 @@
-// src/pages/Home.tsx
 import { useEffect, useState } from 'react'
 import ProductCard from '../components/ProductCard'
 import type { APIProduct, Product } from '../types/product'
-// import { useCartStore } from '../store/cartStore'
-
-
-// type Product = {
-//   id: string
-//   title: string
-//   description: string
-//   price: number
-//   stock: number
-//   image: string
-//   category: string
-// }
 
 const Home = () => {
   const [products, setProducts] = useState<Product[]>([])
@@ -26,7 +13,7 @@ const Home = () => {
     const rawData: APIProduct[] = await res.json()
 
     const normalized: Product[] = rawData.map(item => ({
-      id: item.id.toString(), // make sure it's a string
+      id: item.id.toString(), 
       title: item.name,
       description: item.description,
       price: parseFloat(item.price.replace(/[£₹$]/g, '')),
@@ -50,9 +37,7 @@ const Home = () => {
 
   return (
     <div className="p-6 max-w-7xl mx-auto">
-        {/* <Link to="/checkout" className="bg-blue-600 text-white px-4 py-2 rounded">
-  Go to Checkout
-    </Link> */}
+       
       <h1 className="text-2xl font-bold mb-4">Groceries</h1>
       <input
         placeholder="Search..."

@@ -1,4 +1,3 @@
-// src/pages/Checkout.tsx
 import { useCartStore } from '../store/cartStore'
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -20,8 +19,6 @@ const Checkout = () => {
     }, [cart, getSubtotal, getDiscount])
 
     const handleCheckout = () => {
-        // Optionally clear the cart here
-        // useCartStore.setState({ cart: [] })
         navigate('/success')
     }
 
@@ -58,14 +55,14 @@ const Checkout = () => {
                                 <div className="flex items-center gap-3">
                                     <button
                                         className="px-2 bg-red-500 text-white rounded"
-                                        onClick={() => updateQuantity(item.id, Math.max(1, item.quantity - 1))}  // Decrease qty
+                                        onClick={() => updateQuantity(item.id, Math.max(1, item.quantity - 1))}  
                                     >
                                         −
                                     </button>
                                     <span>{item.quantity}</span>
                                     <button
                                         className="px-2 bg-green-500 text-white rounded"
-                                        onClick={() => updateQuantity(item.id, item.quantity + 1)}  // Increase qty
+                                        onClick={() => updateQuantity(item.id, item.quantity + 1)} 
                                     >
                                         +
                                     </button>
@@ -75,7 +72,7 @@ const Checkout = () => {
                             <div className="font-semibold">£{(item.price * item.quantity).toFixed(2)}</div>
 
                             <button
-                                onClick={() => removeFromCart(item.id)}  // Remove item from cart
+                                onClick={() => removeFromCart(item.id)}  
                                 className="text-red-500 hover:text-red-700 text-xl"
                             >
                                 ×
